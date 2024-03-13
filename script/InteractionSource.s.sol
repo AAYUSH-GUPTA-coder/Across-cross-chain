@@ -5,7 +5,7 @@ import "forge-std/Script.sol";
 import {SourceOptimism} from "../src/SourceOptimism.sol";
 
 contract InteractionSource is Script {
-    address public sourceContract = 0x9761f7Cf9f764a3cc42875Ac1D47c275AC709386;
+    address public sourceContract = 0x529dcE26b4B4012e25DE759641a450645D0a5c70;
     address spookPool = 0x7E63A5f1a8F0B4d0934B2f2327DAED3F6bb2ee75; // SpokePoolArbitrumSepolia
     address owner = 0xB9f9Af07fAd74C23F35CAeC708515782a15911Ba;
     address depositor = 0xB9f9Af07fAd74C23F35CAeC708515782a15911Ba;
