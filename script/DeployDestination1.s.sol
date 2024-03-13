@@ -6,7 +6,7 @@ import {Destination} from "../src/Destination.sol";
 
 contract DeployDestination1 is Script {
     function run() external returns (Destination) {
-        address spookPool = 0x4e8E101924eDE233C13e2D8622DC8aED2872d505; // SpokePoolOptimismSepolia
+        address spookPool = 0x7E63A5f1a8F0B4d0934B2f2327DAED3F6bb2ee75; // SpokePoolArbitrumSepolia
 
         vm.startBroadcast();
         Destination destination = new Destination(spookPool);
