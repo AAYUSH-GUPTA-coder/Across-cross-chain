@@ -49,6 +49,11 @@ deploySource:
 deployDestination:
 	@forge script script/DeployDestination1.s.sol:DeployDestination1 $(NETWORK_ARGS)
 
+sourceInteraction:
+	@forge script script/InteractionSource.s.sol:InteractionSource $(NETWORK_ARGS)
+
 
 # command to run deploy makefile
 # make deployDestination ARGS="--network arbSepolia"
+# make deploySource ARGS="--network optSepolia"
+# make sourceInteraction ARGS="--network optSepolia"
