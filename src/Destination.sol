@@ -2,8 +2,6 @@
 pragma solidity 0.8.24;
 
 import {InterfaceV3SpokePool} from "./InterfaceV3SpokePool.sol";
-import {ISwapRouter} from "./ISwapRouter.sol";
-import {IERC20} from "./IERC20.sol";
 
 error Unauthorized();
 
