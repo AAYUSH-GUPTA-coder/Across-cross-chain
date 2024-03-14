@@ -30,21 +30,22 @@ contract SourceOptimism {
         address _recipient, // address of the receipent smart contract
         address _inputToken, // address of the input token
         address _outputToken, // address(0), // outputToken: 0 address means the output token and input token are the same. Today, no relayers support swapping so the relay will not be filled if this is set to anything other than 0x0.
-        uint256 _inputAmount, // inputAmount
+        /*uint256 _inputAmount,*/ // inputAmount
         uint256 _outputAmount, // amount - totalRelayFee, outputAmount: this is the amount - relay fees. totalRelayFee is the value returned by the suggested-fees API.
         uint256 _destinationChainId, // destinationChainId
         address _exclusiveRelayer, // address(0), exclusiveRelayer: set to 0x0 for typical integrations.
         uint32 _quoteTimestamp, // timestamp: this should be the timestamp returned by the API. Otherwise, set to block.timestamp.
         uint32 _fillDeadline, // block.timestamp + 21600, // fillDeadline: We reccomend a fill deadline of 6 hours out. The contract will reject this if it is beyond 8 hours from now.
         uint32 _exclusivityDeadline, // 0, // exclusivityDeadline: since there's no exclusive relayer, set this to 0.
-        bytes calldata _message // "", // message: empty message since this is just a simple transfer.
+        bytes calldata _message // "0x", // message: empty message since this is just a simple transfer.
     ) public payable {
         spokePool.depositV3(
             _depositor,
             _recipient,
             _inputToken,
             _outputToken,
-            _inputAmount,
+            /*_inputAmount,*/
+            msg.value,
             _outputAmount,
             _destinationChainId,
             _exclusiveRelayer,
